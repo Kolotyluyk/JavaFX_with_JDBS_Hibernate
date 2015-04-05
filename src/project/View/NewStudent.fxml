@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="274.0" style="-fx-background-color: #eadbb3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.NewStudentController">
+   <children>
+      <ImageView fitHeight="181.0" fitWidth="200.0" layoutX="47.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/image/RTdgdqRT9.png" />
+         </image>
+      </ImageView>
+      <GridPane alignment="TOP_CENTER" layoutX="19.0" layoutY="195.0" prefHeight="207.0" prefWidth="236.0">
+         <children>
+            <Label text="Name" textFill="#ffecbd">
+               <font>
+                  <Font name="Vani Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Lastname" textFill="#ffecbd" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Vani Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Group" textFill="#ffecbd" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Vani Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Department" textFill="#ffecbd" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Vani Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Date" textFill="#ffecbd" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Vani Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TextFieldName" prefHeight="25.0" prefWidth="106.0" GridPane.columnIndex="1" />
+            <TextField fx:id="TextFieldLastName" prefHeight="25.0" prefWidth="106.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="TextFieldGroup" prefHeight="25.0" prefWidth="106.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="TextFieldDate" prefHeight="25.0" prefWidth="106.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="ComboBoxDepartment" prefWidth="150.0" style="-fx-background-color: #eadbb3;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="106.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <HBox layoutX="70.0" layoutY="409.0" prefHeight="25.0" prefWidth="158.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#Okclick" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #fadbb9;" text="OK" />
+            <Button mnemonicParsing="false" onAction="#CancelClick" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #fadbb9;" text="cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
