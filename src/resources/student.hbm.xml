@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Model.Student" table="STUDENTS">
+<id name="id" column="ID" type="java.lang.Integer">
+    <generator class="increment"></generator>
+</id>
+        <property name="firstName" column="FIRSTNAME" type="java.lang.String" length="30"></property>
+        <property name="lastName" column="LASTNAME" type="java.lang.String" length="30"></property>
+        <property name="group" column="GROUP" type="java.lang.String" length="5"></property>
+        <property name="department" column="DEPARTMENT" type="java.lang.String" length="30"></property>
+        <property name="imageLocation" column="IMAGE" type="java.lang.String" length="50"></property>
+    </class>
+
+</hibernate-mapping>

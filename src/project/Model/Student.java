@@ -3,81 +3,114 @@ package project.Model;
 /**
  * Created by Сергій on 28.03.2015.
  */
-import javafx.beans.property.SimpleStringProperty;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.util.Date;
-import javafx.beans.property.StringProperty;
 
 
-
+@Entity
+@Table(name= "STUDENTS")
 public class Student {
-    private final  StringProperty Name;
-    private final  StringProperty SecondName;
-    final private StringProperty Group;
-    final private StringProperty Department;
-    private Date date;
-    final private StringProperty ImageLocatoin;
+    @Id
+    @Column(name="ID",nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    @Column(name= "FIRSTNAME")
+    private String firstName;
+
+    @Column(name= "LASTNAME")
+    private String lastName;
+
+    @Column(name= "GROUP")
+    private String group;
+
+    @Column(name= "DEPARTMENT")
+    private String department;
+
+    @Column(name= "IMAGE")
+    private String imageLocation;
 
 
 
-    public Student (){
-        this.Name=new SimpleStringProperty("");
-        this.SecondName=new SimpleStringProperty("");
-        this.Group=new SimpleStringProperty("");
-        this.Department=new SimpleStringProperty("");
-        this.date=new Date();
-        this.ImageLocatoin=new SimpleStringProperty("");
+    public Student(){ }
 
+    public String getFirstName() {
+        return firstName;
     }
 
-    public Student (String Name,String SecondName,String Group,String Department,Date date,String ImageLocation){
-        this.Name=new SimpleStringProperty(Name);
-        this.SecondName=new SimpleStringProperty(SecondName);
-        this.Group=new SimpleStringProperty(Group);
-        this.Department=new SimpleStringProperty(Department);
-        this.date=date;
-        this.ImageLocatoin=new SimpleStringProperty(ImageLocation);
-
+    public String getLastName() {
+        return lastName;
     }
 
-
-    public void setName(String a){
-       Name.set(a);
-    }
-    public void setSecondName(String SecondName){
-        this.SecondName.set(SecondName);
+    public String getGroup() {
+        return group;
     }
 
-    public void setGroup(String a){
-        Group.set(a);
-    }
-    public void setDepartment(String a)
-    {
-        Department.set(a);
-    }
-    public void setData(Date a){
-        date=a;
-    }
-    public void setImageLocation(String a){
-        ImageLocatoin.set(a);
+    public String getDepartment() {
+        return department;
     }
 
 
 
-    public StringProperty getName(){
-        return Name;
-    }
-    public StringProperty getSecondName(){
-        return SecondName;
-    }
-    public StringProperty getGroup(){
-        return Group;
-    }
-    public StringProperty getDepartment(){return Department;}
-    public Date getDate(){return date;   }
-    public StringProperty getImageLocation(){return ImageLocatoin;}
-    public StringProperty getImageLocatoin(){
-        return ImageLocatoin;
+    public String getImageLocation() {
+        return imageLocation;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+public void setId(int id){
+    this.id=id;
 }
 
+
+    public void setImageLocation(String imageLocation) {
+        this.imageLocation = imageLocation;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Student( String firstName, String lastName, String group, String department,  String imageLocation) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.group = group;
+        this.department = department;
+
+        this.imageLocation = imageLocation;
+
+    }
+
+
+
+    @Override
+    public String toString(){
+        return "Student{"+
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", groupNumber='" + group + '\'' +
+                ", departmentName='" + department + '\'' +
+                ", imageLocation='" + imageLocation + '\'' +
+                '}';
+    }
+
+
+
+
+}

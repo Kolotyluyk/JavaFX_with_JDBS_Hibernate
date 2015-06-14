@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="274.0" style="-fx-background-color: #eadbb3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.NewStudentController">
    <children>
-      <ImageView fitHeight="181.0" fitWidth="200.0" layoutX="47.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="Photo" fitHeight="181.0" fitWidth="200.0" layoutX="47.0" layoutY="14.0" onMouseClicked="#ImageClick" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../resources/image/RTdgdqRT9.png" />
          </image>
@@ -28,12 +28,12 @@
                   <Font name="Vani Bold" size="16.0" />
                </font>
             </Label>
-            <Label text="Group" textFill="#ffecbd" GridPane.rowIndex="2">
+            <Label text="Age" textFill="#ffecbd" GridPane.rowIndex="2">
                <font>
                   <Font name="Vani Bold" size="16.0" />
                </font>
             </Label>
-            <Label text="Department" textFill="#ffecbd" GridPane.rowIndex="3">
+            <Label text="Profession" textFill="#ffecbd" GridPane.rowIndex="3">
                <font>
                   <Font name="Vani Bold" size="16.0" />
                </font>
